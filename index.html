@@ -1,116 +1,324 @@
-        <span>❄️</span>
-        <b>AC Repair</b>
-      </div>
-      <div class="service">
-        <span>🧊</span>
-        <b>Fridge Repair</b>
-      </div>
-      <div class="service">
-        <span>🔩</span>
-        <b>Installation</b>
-      </div>
-      <div class="service">
-        <span>🔍</span>
-        <b>Checking</b>
-      </div>
-    </div>
-  </section>
 
-  <section class="card" id="booking">
-    <h2>📋 Service Booking</h2>
-    <p>নিচের ফর্মটি পূরণ করে WhatsApp-এ পাঠান।</p>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071b33">
+<meta name="description" content="Roy Refrigeration - AC ও ফ্রিজ সার্ভিস, মেরামত, ইনস্টলেশন এবং গ্যাস চার্জিং। Kaikhali Bazar, Nadia.">
+<title>Roy Refrigeration | AC & Fridge Service</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#071b33;
+  --blue:#087cf0;
+  --cyan:#25d9ef;
+  --light:#f3f8ff;
+  --dark:#13243a;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,"Noto Sans Bengali",sans-serif;
+  background:var(--light);
+  color:var(--dark);
+  line-height:1.6;
+}
+a{text-decoration:none}
+header{
+  background:var(--navy);
+  color:white;
+  padding:15px 5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.logo{font-size:21px;font-weight:800}
+.logo span{color:var(--cyan)}
+nav{display:flex;gap:16px;flex-wrap:wrap}
+nav a{color:white;font-size:13px}
+.hero{
+  padding:65px 6% 55px;
+  background:radial-gradient(circle at top right,#124c80 0,#071b33 55%);
+  color:white;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:30px;
+  align-items:center;
+}
+.tag{
+  display:inline-block;
+  border:1px solid #25d9ef;
+  color:#7defff;
+  border-radius:30px;
+  padding:6px 13px;
+  font-size:13px;
+  margin-bottom:17px;
+}
+h1{font-size:clamp(32px,5vw,52px);line-height:1.2;margin-bottom:18px}
+h1 span{color:var(--cyan)}
+.hero p{color:#d0e2f4;margin-bottom:25px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:12px 19px;
+  border-radius:10px;font-weight:bold;
+  text-align:center;border:0;cursor:pointer;font-size:14px;
+}
+.primary{background:var(--cyan);color:#06213b}
+.secondary{border:1px solid #7fa9d2;color:white}
+.hero-art{
+  min-height:230px;border:1px solid #2d658c;
+  background:linear-gradient(145deg,#123e66,#09223c);
+  border-radius:25px;display:flex;align-items:center;
+  justify-content:center;text-align:center;padding:25px;
+}
+.hero-art .emoji{font-size:95px;display:block}
+.hero-art strong{font-size:20px;color:white}
+section{padding:55px 6%}
+.section-title{text-align:center;margin-bottom:30px}
+.section-title h2{font-size:29px;color:var(--navy)}
+.section-title p{color:#62748a;margin-top:7px}
+.services{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:17px
+}
+.card{
+  background:white;border:1px solid #e2eaf4;
+  padding:23px;border-radius:17px;
+  box-shadow:0 7px 22px #102b4610;
+}
+.card .icon{font-size:35px;margin-bottom:10px}
+.card h3{margin-bottom:8px;color:var(--navy)}
+.card p{font-size:14px;color:#66758a}
+.why{background:#e8f3ff}
+.features{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:14px
+}
+.feature{
+  background:white;padding:17px;border-radius:12px;
+  font-weight:bold
+}
+.feature span{color:#0786d8;margin-right:8px}
+.booking{
+  display:grid;grid-template-columns:.85fr 1.15fr;
+  gap:25px;align-items:start
+}
+.booking-info{
+  background:var(--navy);color:white;padding:25px;border-radius:18px
+}
+.booking-info h3{font-size:24px;margin-bottom:12px}
+.booking-info p{color:#d2e1f2;margin:12px 0}
+form{
+  background:white;padding:23px;border-radius:18px;
+  box-shadow:0 7px 25px #102b4610
+}
+label{display:block;font-size:14px;font-weight:bold;margin:12px 0 5px}
+input,select,textarea{
+  width:100%;padding:12px;border:1px solid #d2dce9;
+  border-radius:9px;font:inherit;background:#fff
+}
+textarea{resize:vertical;min-height:85px}
+form button{width:100%;margin-top:17px;background:#19b96b;color:white}
+.note{font-size:12px;color:#738198;margin-top:10px}
+footer{
+  background:#041426;color:#d2e1f2;
+  text-align:center;padding:25px 15px;font-size:13px
+}
+.float-wa{
+  position:fixed;bottom:18px;right:17px;
+  background:#20c86b;color:white;border-radius:40px;
+  padding:12px 17px;font-weight:bold;
+  box-shadow:0 5px 20px #0003;z-index:5
+}
+@media(max-width:700px){
+  header{padding:14px 5%}
+  nav{width:100%;gap:14px}
+  .hero{grid-template-columns:1fr;padding-top:42px}
+  .hero-art{min-height:170px}
+  .hero-art .emoji{font-size:65px}
+  .services{grid-template-columns:1fr}
+  .features{grid-template-columns:1fr}
+  .booking{grid-template-columns:1fr}
+  section{padding:42px 5%}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <a class="logo" href="#">ROY <span>REFRIGERATION</span></a>
+  <nav>
+    <a href="#home">হোম</a>
+    <a href="#services">সার্ভিস</a>
+    <a href="#booking">বুকিং</a>
+    <a href="#contact">যোগাযোগ</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div>
+    <span class="tag">❄ AC • FRIDGE • REPAIR</span>
+    <h1>আপনার AC ও ফ্রিজের <span>বিশ্বস্ত সার্ভিস</span></h1>
+    <p>AC ও ফ্রিজের সমস্যা, ইনস্টলেশন, সার্ভিসিং এবং মেরামতের জন্য যোগাযোগ করুন Roy Refrigeration-এর সঙ্গে।</p>
+    <div class="buttons">
+      <a class="btn primary" href="#booking">এখনই বুক করুন ↗</a>
+      <a class="btn secondary" href="tel:+918016771430">📞 কল করুন</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div>
+      <span class="emoji">❄️🔧</span>
+      <strong>AC & Fridge Care</strong>
+      <p>আপনার যন্ত্রের যত্নে নির্ভরযোগ্য সার্ভিস</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-title">
+    <h2>আমাদের সার্ভিস</h2>
+    <p>আপনার প্রয়োজন অনুযায়ী সার্ভিস বেছে নিন</p>
+  </div>
+  <div class="services">
+    <article class="card">
+      <div class="icon">❄️</div>
+      <h3>AC Servicing</h3>
+      <p>AC পরিষ্কার, কুলিং সমস্যা পরীক্ষা ও নিয়মিত সার্ভিসিং।</p>
+    </article>
+    <article class="card">
+      <div class="icon">🧊</div>
+      <h3>Fridge Repair</h3>
+      <p>ফ্রিজ ঠান্ডা না হওয়া, কম কুলিং ও অন্যান্য সমস্যা পরীক্ষা।</p>
+    </article>
+    <article class="card">
+      <div class="icon">🛠️</div>
+      <h3>Installation & Repair</h3>
+      <p>AC ইনস্টলেশন, ত্রুটি নির্ণয় ও প্রয়োজনীয় মেরামত।</p>
+    </article>
+    <article class="card">
+      <div class="icon">💨</div>
+      <h3>Gas Checking</h3>
+      <p>কুলিং কম হলে গ্যাসের চাপ ও লিকেজ পরীক্ষা।</p>
+    </article>
+    <article class="card">
+      <div class="icon">⚡</div>
+      <h3>Electrical Checking</h3>
+      <p>AC ও ফ্রিজের বৈদ্যুতিক সমস্যা পরীক্ষা।</p>
+    </article>
+    <article class="card">
+      <div class="icon">🏠</div>
+      <h3>Home Service</h3>
+      <p>আপনার বাড়িতে সার্ভিসের জন্য বুকিংয়ের অনুরোধ পাঠান।</p>
+    </article>
+  </div>
+</section>
+
+<section class="why">
+  <div class="section-title">
+    <h2>কেন Roy Refrigeration?</h2>
+    <p>সার্ভিসের আগে সমস্যা ও খরচ সম্পর্কে জেনে নিন</p>
+  </div>
+  <div class="features">
+    <div class="feature"><span>✓</span> সরাসরি টেকনিশিয়ানের সঙ্গে যোগাযোগ</div>
+    <div class="feature"><span>✓</span> AC ও ফ্রিজ মেরামতের সার্ভিস</div>
+    <div class="feature"><span>✓</span> WhatsApp-এ বুকিংয়ের অনুরোধ</div>
+    <div class="feature"><span>✓</span> কাজ শুরুর আগে খরচ জেনে নিন</div>
+  </div>
+</section>
+
+<section id="booking">
+  <div class="section-title">
+    <h2>সার্ভিস বুকিং করুন</h2>
+    <p>ফর্ম পূরণ করে WhatsApp-এ বুকিংয়ের অনুরোধ পাঠান</p>
+  </div>
+  <div class="booking">
+    <div class="booking-info" id="contact">
+      <h3>যোগাযোগ করুন</h3>
+      <p>📞 ফোন: 8016771430</p>
+      <p>📍 ঠিকানা: Kaikhali Bazar, Nadia</p>
+      <p>🕒 সার্ভিসের সময় ফোন করে জেনে নিন।</p>
+      <a class="btn primary" href="tel:+918016771430">এখনই কল করুন</a>
+    </div>
 
     <form id="bookingForm">
-      <label for="name">আপনার নাম *</label>
-      <input id="name" required placeholder="আপনার নাম লিখুন">
+      <label for="customer">আপনার নাম</label>
+      <input id="customer" name="customer" required placeholder="আপনার নাম লিখুন">
 
-      <label for="phone">মোবাইল নম্বর *</label>
-      <input id="phone" type="tel" required
-        inputmode="numeric" pattern="[0-9]{10}"
-        maxlength="10" placeholder="১০ সংখ্যার নম্বর">
+      <label for="phone">মোবাইল নম্বর</label>
+      <input id="phone" name="phone" type="tel"
+        inputmode="numeric" pattern="[0-9]{10}" maxlength="10"
+        required placeholder="১০ সংখ্যার নম্বর">
 
-      <label for="service">কোন সার্ভিস লাগবে? *</label>
-      <select id="service" required>
+      <label for="service">কোন সার্ভিস লাগবে?</label>
+      <select id="service" name="service" required>
         <option value="">সার্ভিস বেছে নিন</option>
+        <option>AC Servicing</option>
         <option>AC Repair</option>
         <option>AC Installation</option>
-        <option>AC Servicing</option>
         <option>Fridge Repair</option>
-        <option>Gas Charging</option>
-        <option>Fridge Cooling Problem</option>
-        <option>Other</option>
+        <option>Gas Checking</option>
+        <option>Other Problem</option>
       </select>
 
-      <label for="address">আপনার ঠিকানা *</label>
-      <textarea id="address" required
-        placeholder="গ্রাম, এলাকা ও পিনকোড লিখুন"></textarea>
+      <label for="address">আপনার ঠিকানা</label>
+      <input id="address" name="address" required placeholder="এলাকা ও ঠিকানা লিখুন">
 
-      <label for="date">কোন তারিখে সার্ভিস লাগবে?</label>
-      <input id="date" type="date">
+      <label for="date">কোন তারিখে সার্ভিস চান?</label>
+      <input id="date" name="date" type="date" required>
 
       <label for="problem">সমস্যার বিবরণ</label>
-      <textarea id="problem"
-        placeholder="যেমন: AC ঠান্ডা করছে না"></textarea>
+      <textarea id="problem" name="problem" placeholder="যেমন: AC ঠান্ডা হচ্ছে না"></textarea>
 
-      <button type="submit">WhatsApp-এ বুকিং পাঠান</button>
-      <p class="note">
-        বুকিং পাঠালে WhatsApp খুলবে। সেখানে মেসেজটি দেখে
-        নিজে Send করতে হবে। বুকিং নিশ্চিত হবে সার্ভিস প্রদানকারীর
-        সঙ্গে কথা বলার পরে।
-      </p>
+      <button class="btn" type="submit">WhatsApp-এ বুকিং পাঠান ↗</button>
+      <p class="note">বাটনে চাপ দিলে WhatsApp খুলবে। মেসেজটি দেখে Send চাপতে হবে।</p>
     </form>
-  </section>
-
-  <section class="card">
-    <h2>📞 যোগাযোগ</h2>
-    <p><b>Roy Refrigeration</b></p>
-    <p>ফোন: 8016771430</p>
-    <p>এলাকা: Kaikhali Bazar, Nadia</p>
-    <a class="call" href="tel:8016771430">এখনই ফোন করুন</a>
-  </section>
-
+  </div>
+</section>
 </main>
 
 <footer>
-  <p>© Roy Refrigeration</p>
-  <p>AC & Fridge Repair Service</p>
+  <p><strong>ROY REFRIGERATION</strong></p>
+  <p>AC & Fridge Service | Kaikhali Bazar, Nadia</p>
+  <p>Phone: 8016771430</p>
+  <p>© <span id="year"></span> Roy Refrigeration. All rights reserved.</p>
 </footer>
 
+<a class="float-wa"
+   href="https://wa.me/918016771430"
+   target="_blank" rel="noopener">WhatsApp chat</a>
+
 <script>
-  const form = document.getElementById("bookingForm");
+document.getElementById("year").textContent = new Date().getFullYear();
 
-  form.addEventListener("submit", function(event) {
-    event.preventDefault();
+document.getElementById("date").min =
+  new Date().toLocaleDateString("en-CA");
 
-    const name = document.getElementById("name").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const service = document.getElementById("service").value;
-    const address = document.getElementById("address").value.trim();
-    const date = document.getElementById("date").value || "তারিখ ঠিক হয়নি";
-    const problem = document.getElementById("problem").value.trim()
-      || "বিস্তারিত জানানো হয়নি";
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+  e.preventDefault();
 
-    if (!/^[0-9]{10}$/.test(phone)) {
-      alert("সঠিক ১০ সংখ্যার মোবাইল নম্বর দিন।");
-      return;
-    }
+  const name = document.getElementById("customer").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const service = document.getElementById("service").value;
+  const address = document.getElementById("address").value.trim();
+  const date = document.getElementById("date").value;
+  const problem = document.getElementById("problem").value.trim();
 
-    const message =
-      "নতুন সার্ভিস বুকিং - Roy Refrigeration\n\n" +
-      "নাম: " + name + "\n" +
-      "কাস্টমারের ফোন: " + phone + "\n" +
-      "সার্ভিস: " + service + "\n" +
-      "ঠিকানা: " + address + "\n" +
-      "তারিখ: " + date + "\n" +
-      "সমস্যা: " + problem;
+  const message =
+    "Roy Refrigeration - New Booking Request\n\n" +
+    "Name: " + name + "\n" +
+    "Customer Phone: " + phone + "\n" +
+    "Service: " + service + "\n" +
+    "Address: " + address + "\n" +
+    "Preferred Date: " + date + "\n" +
+    "Problem: " + (problem || "Not specified");
 
-    const businessNumber = "918016771430";
-    const url = "https://wa.me/" + businessNumber +
-      "?text=" + encodeURIComponent(message);
+  const url = "https://wa.me/918016771430?text=" +
+    encodeURIComponent(message);
 
-    window.open(url, "_blank");
-  });
+  window.open(url, "_blank");
+});
 </script>
-
 </body>
 </html>
